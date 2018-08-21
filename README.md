@@ -19,3 +19,10 @@ There are 10 commands for use and you can add more
 4. Install the requirements - use the command `pip install -r requirements.txt`
 5. Run the bot.py file
 6. Have fun :)
+
+## Troubleshooting
+
+### Module not found
+
+If this error occours then not all of the modules are installed.  
+It is most likely you might of not installed the modules in the `requirements.txt`. In that case, just run `pip install -r requirements.txt`
