@@ -9,6 +9,8 @@ Commands are availiabe in the txt file named `List of commands`
 The prefix of the Bot is `#`  
 There are 10 commands for use and you can add more  
 
+# Installation  
+
 ## Instructions
 
 1. Install Python - I have used Python 3.6 (64-Bit)
