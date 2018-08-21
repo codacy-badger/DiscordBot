@@ -6,5 +6,5 @@ The MIT License has been applied to this project so you are able to change the w
 ## What it can do
 
 Commands are availiabe in the txt file named List of commands  
-The prefix of the Bot is --'#'--
+The prefix of the Bot is `#`  
 There are 10 commands for use and you can add more
