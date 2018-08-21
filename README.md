@@ -1,6 +1,8 @@
 # Lif3 Bot
 
-This a discord bot that I have made with loads of commands available  
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ae3c47f72ca044edbfe49b3f841d2c82)](https://www.codacy.com/project/ItzAfroBoy/DiscordBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ItzAfroBoy/DiscordBot&amp;utm_campaign=Badge_Grade_Dashboard)
+
+This is a discord bot that I have made with loads of commands available  
 The `MIT License` has been applied to this project so you are able to change the project at your wish  
 
 ## What it can do  
