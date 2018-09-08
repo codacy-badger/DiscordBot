@@ -4,13 +4,11 @@
 import discord
 from discord.ext import commands
 from discord.ext.commands import bot
-import asyncio
 import time
 
 #Prefix
 bot = commands.Bot(command_prefix='#')
-
-token = ""
+bot.remove_command('help')
 
 #Launching Messgae
 print("")
@@ -131,4 +129,4 @@ async def kick(ctx, user: discord.Member):
     await bot.say(":boot: Cya, {}. Ya loser!".format(user.name))
     await bot.kick(user)
 
-bot.run(token)
+bot.run()
