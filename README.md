@@ -19,4 +19,3 @@ There are 10 commands for use and you can add more
 4. Install the requirements - `pip install -r requirements.txt`
 5. Run the bot.py file
 6. Have fun :)
-
