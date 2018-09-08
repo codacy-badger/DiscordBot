@@ -13,7 +13,7 @@ There are 10 commands for use and you can add more
 
 ## Installation
 
-1. Install Python 3.6 (Definatly compatible with 3.6.6)
+1. Install Python 3.6 (Definitely compatible with 3.6.6)
 2. Make sure pip is installed
 3. Clone this repository
 4. Install the requirements - `pip install -r requirements.txt`
