@@ -2,8 +2,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ae3c47f72ca044edbfe49b3f841d2c82)](https://www.codacy.com/project/ItzAfroBoy/DiscordBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ItzAfroBoy/DiscordBot&amp;utm_campaign=Badge_Grade_Dashboard)
 
-This is a discord bot that I have made with loads of commands available  
-The `MIT License` has been applied to this project so you are able to change the project at your wish  
+A Discord bot made with discord.py  
+If you need help with adding commands, look at the [Discord.py API Documentation](http://discordpy.readthedocs.io/en/latest/api.html#)
 
 ## What it can do  
 
@@ -13,19 +13,10 @@ There are 10 commands for use and you can add more
 
 ## Installation
 
-### Instructions
-
-1. Install Python - I have used Python 3.6 (64-Bit)
-2. Make sure pip is installed - use the command `pip` to check
+1. Install Python 3.6 (Definatly compatible with 3.6.6)
+2. Make sure pip is installed
 3. Clone this repository
-4. Install the requirements - use the command `pip install -r requirements.txt`
+4. Install the requirements - `pip install -r requirements.txt`
 5. Run the bot.py file
 6. Have fun :)
 
-## Troubleshooting
-
-### Module not found
-
-If this error occours then not all of the modules are installed.  
-It is most likely you might of not installed the modules in the `requirements.txt`. In that case, just run `pip install -r requirements.txt`  
-If you have and this error is still popping up then look at the error to see what module is missing, remember the name and then run `pip install [package/module]`
