@@ -3,15 +3,14 @@
 #Setup
 import discord
 from discord.ext import commands
-from discord.ext.commands import Bot
+from discord.ext.commands import bot
 import asyncio
 import time
 
 #Prefix
 bot = commands.Bot(command_prefix='#')
-bot.remove_command('help')
 
-token = "BOT TOKEN"
+token = ""
 
 #Launching Messgae
 print("")
@@ -111,17 +110,6 @@ async def clear(ctx, amount=100):
     await bot.delete_messages(messages)
     await bot.say('{} Messages Deleted'.format(amount))
     print("{} Messages have been deleted in {}".format(amount, ctx.message.channel))
-
-
-@bot.command(pass_context=True)
-async def restart(ctx):
-    print("Bot Restarting")
-    bot.logout
-    time.sleep(30)
-    await bot.login(token)
-    print("Bot restarted")
-    print("-------------")
-
 
 @bot.command(pass_context=True)
 async def suicide(ctx):
