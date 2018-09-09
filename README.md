@@ -1,4 +1,4 @@
-# Lif3 Bot
+# Chatty Bot
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ae3c47f72ca044edbfe49b3f841d2c82)](https://www.codacy.com/project/ItzAfroBoy/DiscordBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ItzAfroBoy/DiscordBot&amp;utm_campaign=Badge_Grade_Dashboard)
 
