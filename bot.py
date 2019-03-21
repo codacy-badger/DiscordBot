@@ -1,132 +1,66 @@
-#Lif3 Bot by ItzAfroBoy
+# Bot by ItzAfroBoy
 
-#Setup
+# Setup
 import discord
 from discord.ext import commands
 from discord.ext.commands import bot
 import time
+import asyncio
 
-#Prefix
-bot = commands.Bot(command_prefix='#')
+# Prefix
+bot = commands.Bot(command_prefix='~')
 bot.remove_command('help')
 
-#Launching Messgae
-print("")
-print("Launching Lif3 Bot ...")
-print("----------------------")
-print("")
+token = ""
 
-#Events
+# Launching
+print()
+print("Starting your Bot...")
+print("--------------------")
+print()
 
 
+# Events
 @bot.event
 async def on_ready():
-#    await bot.change_presence(game=discord.Game(name='STATUS'))
-    print("Bot Version: 1.0.1")
+    await bot.change_presence(game=discord.Game(name='With ItzAfroBoy'))
+    print("Version: 1.0.0")
     time.sleep(1)
     print("Discord Version: " + discord.__version__)
-    time.sleep(0.9)
+    time.sleep(1)
     print(bot.user.name + " Online")
     print("-----------------------")
-    print("")
+    print()
 
-
-# @bot.event
-# async def on_member_join(ctx):
-#     author = ctx.message.author
-#     await bot.send_message(author, 'Welcome to {}'.format(ctx.message.server))
-#     time.sleep(2)
-#     await bot.send_message(author, 'Please react for a role in [CHANNEL]')
-#     await bot.send_message(author, 'Type #help for a list of available')
-
-#Commands
-
-
-@bot.command(pass_context=True)
-async def ping(ctx):
-    await bot.say(":ping_pong: pong!! xSSS")
-    print("{} has pinged".format(ctx.message.author))
-
-
-@bot.command(pass_context=True)
-async def pong(ctx):
-    await bot.say(":ping_pong: ping!! xSSS")
-    print("{} has ponged".format(ctx.message.author))
-
-
-@bot.command(pass_context=True)
-async def info(ctx, user: discord.Member):
-    embed = discord.Embed(title="{}'s info".format(user.name), description="Here's what I've got", color=0x00ff00)
-#    embed.set_author(name="[Your Name]")
-    embed.add_field(name="Name", value=user.name, inline=True)
-    embed.add_field(name="ID", value=user.id, inline=True)
-    embed.add_field(name="Status", value=user.status, inline=True)
-    embed.add_field(name="Highest Role", value=user.top_role)
-    embed.add_field(name="Joined", value=user.joined_at)
-    embed.set_thumbnail(url=user.avatar_url)
-    await bot.say(embed=embed)
-    print("{} has requested {}'s Info".format(ctx.messsage.author, user.name))
-
-
-@bot.command(pass_context=True)
-async def serverinfo(ctx):
-    embed = discord.Embed(name="{} info".format(ctx.message.server.name), description="Here's what I've got", color=0x00ff00)
-#    embed.set_author(name="[Your Name]")
-    embed.add_field(name="Name", value=ctx.message.server.name, inline=True)
-    embed.add_field(name="ID", value=ctx.message.server.id, inline=True)
-    embed.add_field(name="Roles", value=(ctx.message.server.roles), inline=True)
-    embed.add_field(name="Members", value=(ctx.message.server.members))
-    embed.set_thumbnail(url=ctx.message.server.icon_url)
-    await bot.say(embed=embed)
-    print("{} has requested {} Info".format(ctx.message.author, ctx.message.server.name))
+# Commands
 
 
 @bot.command(pass_context=True)
 async def help(ctx):
-    embed = discord.Embed(title="Commands", description="Here's all the commands avaliable", color=0x00ff00)
-#    embed.set_author(name="[Your Name]")
-    embed.add_field(name='#ping', value='pong', inline=True)
-    embed.add_field(name='#pong', value='ping', inline=True)
-    embed.add_field(name='#info [@Username]',value='Get info about a member', inline=True)
-    embed.add_field(name='#serverinfo',value='Get info about the server', inline=True)
-    embed.add_field(name='#help', value='Show this menu', inline=True)
-    embed.add_field(name='#clear', value='Clear all messages', inline=True)
-    embed.add_field(name='#restart', value='Restart the bot', inline=True)
-    embed.add_field(name='#suicide', value='Change the bot presence to a suicide related comment', inline=True)
-    embed.add_field(name='#lonely', value='When you feel lonely', inline=True)
-    embed.add_field(name='#kick [@username]', value='Kicks someone', inline=True)
-    await bot.say(embed=embed)
-    print("{} needs help".format(ctx.message.author))
-
-
-@bot.command(pass_context=True)
-async def clear(ctx, amount=100):
-    channel = ctx.message.channel
-    messages = []
-    async for message in bot.logs_from(channel, limit=int(amount)):
-        messages.append(message)
-    await bot.delete_messages(messages)
-    await bot.say('{} Messages Deleted'.format(amount))
-    print("{} Messages have been deleted in {}".format(amount, ctx.message.channel))
-
-@bot.command(pass_context=True)
-async def suicide(ctx):
-    await bot.change_presence(game=None)
-    time.sleep(1.5)
-    await bot.change_presence(game=discord.Game(name='Suicide is next'))
-    print("{} changed my presence".format(ctx.message.author))
-
-
-@bot.command(pass_context=True)
-async def lonely(ctx):
     author = ctx.message.author
-    await bot.send_message(author, 'Get some friends then')
-    print("{} is lonely".format(ctx.message.author))
+    embed = discord.Embed(title="Help", description="Here are commands you can use.", color=0xBF590E)
+    embed.add_field(name="Ping", value="Find out :smiling_imp:", inline=False)
+    embed.add_field(name="Clear", value="Clear's messages in a channel. \nPlease note, maximum is 100 messages and the bot will display the number\nthat you want deleted.")
+    embed.add_field(name="Help", value="Shows this menu")
+    await bot.send_message(author, embed=embed)
 
 
 @bot.command(pass_context=True)
-async def kick(ctx, user: discord.Member):
-    await bot.say(":boot: Cya, {}. Ya loser!".format(user.name))
-    await bot.kick(user)
+async def ping(ctx):
+    await bot.say("Someone pinged?? :confused:")
+    print("{} pinged".format(ctx.message.author))
 
-bot.run()
+
+@bot.command(pass_context=True)
+async def clear(ctx, number):
+    mgs = []
+    number = int(number)
+    async for i in bot.logs_from(ctx.message.channel, limit=number):
+        mgs.append(i)
+    await bot.delete_messages(mgs)
+    message = await bot.say("`{}` messages deleted".format(number))
+    print("I have deleted {} messages. {} wanted them deleted".format(number, ctx.message.author))
+    time.sleep(1)
+    await bot.delete_message(message)
+
+bot.run(token)
