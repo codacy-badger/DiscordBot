@@ -6,7 +6,7 @@ If you need help with adding commands, look at the [Discord.py API Documentation
 ## Installation
 ```
 1. Install Python 3.6
-2. Install [Discord.py](https://github.com/Rapptz/discord.py) (Skip if already installed)
+2. Install Discord.py (Skip if already installed)
 3. Clone this repository
 4. Install the requirements
 5. Run the bot.py file  
@@ -20,6 +20,8 @@ NOTE: You will NOT be able to add/get rid of commands as I am hosting it.
 will be installed
 >
 
+>To install Discord.py, click [this link](https://github.com/Rapptz/discord.py)
+>
 ## Updates
 ```
 1.0.0: Basics written
